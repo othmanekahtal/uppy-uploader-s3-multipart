@@ -1,0 +1,55 @@
+{
+  "name": "uppy-uploader",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/uppy-uploader/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rspack:rspack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "web",
+        "outputPath": "dist/apps/uppy-uploader",
+        "main": "apps/uppy-uploader/src/main.tsx",
+        "tsConfig": "apps/uppy-uploader/tsconfig.app.json",
+        "rspackConfig": "apps/uppy-uploader/rspack.config.js",
+        "assets": [
+          "apps/uppy-uploader/src/favicon.ico",
+          "apps/uppy-uploader/src/assets"
+        ]
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production",
+          "optimization": true,
+          "sourceMap": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/rspack:dev-server",
+      "options": {
+        "buildTarget": "uppy-uploader:build:development"
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "buildTarget": "uppy-uploader:build:production"
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "uppy-uploader:build",
+        "spa": true
+      }
+    }
+  }
+}
