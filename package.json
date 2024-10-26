@@ -5,17 +5,39 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.679.0",
+    "@aws-sdk/s3-request-presigner": "^3.679.0",
+    "@nestjs/common": "^10.4.6",
+    "@nestjs/config": "^3.3.0",
+    "@nestjs/core": "^10.4.6",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/platform-express": "^10.0.2",
+    "@nx/nest": "^20.0.6",
+    "@uppy/aws-s3": "^4.1.0",
+    "@uppy/core": "^4.2.2",
+    "@uppy/dashboard": "^4.1.1",
+    "@uppy/drag-drop": "^4.0.3",
+    "@uppy/file-input": "^4.0.2",
+    "@uppy/progress-bar": "^4.0.0",
+    "@uppy/react": "^4.0.2",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@nestjs/schematics": "^10.0.1",
+    "@nestjs/testing": "^10.0.2",
     "@nx/eslint": "20.0.6",
     "@nx/eslint-plugin": "20.0.6",
     "@nx/jest": "20.0.6",
     "@nx/js": "20.0.6",
+    "@nx/node": "20.0.6",
     "@nx/react": "20.0.6",
     "@nx/rspack": "20.0.6",
+    "@nx/web": "20.0.6",
+    "@nx/webpack": "20.0.6",
     "@nx/workspace": "20.0.6",
     "@rspack/cli": "1.0.5",
     "@rspack/core": "1.0.5",
@@ -50,6 +72,7 @@
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
     "typescript": "~5.5.2",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.0.0",
+    "webpack-cli": "^5.1.4"
   }
 }
